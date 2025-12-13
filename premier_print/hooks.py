@@ -4,14 +4,17 @@ app_publisher = "Gulinur"
 app_description = "Premier Print kompaniyasi uchun erp tizim"
 app_email = "ruziyevagulinur@gmail.com"
 app_license = "mit"
-
-
 fixtures = [
     "Custom Field",
-    "Property Setter"
+    "Property Setter",
+    "Print Format",
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            ["dt", "in", ["Sales Invoice", "Purchase Order"]]
+        ]
+    }
 ]
-
-
 # Apps
 # ------------------
 
@@ -33,7 +36,7 @@ fixtures = [
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/premier_print/css/premier_print.css"
-# app_include_js = "/assets/premier_print/js/premier_print.js"
+app_include_js = "/assets/premier_print/js/usd_exchange.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/premier_print/css/premier_print.css"
@@ -50,7 +53,13 @@ fixtures = [
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Sales Order": "public/js/sales_order.js",
+    "Purchase Order": "public/js/purchase_order.js",
+    "Sales Invoice": "public/js/sales_invoice.js",
+    "Purchase Invoice": "public/js/purchase_invoice.js",
+    "Purchase Receipt": "public/js/purchase_receipt.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
