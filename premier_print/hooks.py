@@ -5,6 +5,13 @@ app_description = "Premier Print kompaniyasi uchun erp tizim"
 app_email = "ruziyevagulinur@gmail.com"
 app_license = "mit"
 
+
+fixtures = [
+    "Custom Field",
+    "Property Setter"
+]
+
+
 # Apps
 # ------------------
 
