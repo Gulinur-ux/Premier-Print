@@ -1,0 +1,14 @@
+[
+  {
+    "doctype": "Custom Field",
+    "fieldname": "usd_exchange_rate",
+    "label": "USD Exchange Rate (1 USD = X UZS)",
+    "fieldtype": "Float",
+    "dt": "Sales Order",
+    "insert_after": "currency",
+    "hidden": 0,
+    "read_only": 0,
+    "precision": "2",
+    "options": null
+  }
+]
